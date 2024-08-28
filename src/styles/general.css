@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-image: linear-gradient(rgba(36, 42, 46), rgba(36, 42, 46));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 50%;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.app-container {
+  background-color: #2d3439;
+  padding: 3.2rem 6.4rem;
+  margin-top: 4.8rem;
+  min-height: 60rem;
+  box-shadow: 0 2.4rem 4.8rem rgba (0, 0, 0);
+}
+
+h1.app-title {
+  font-size: 3.6rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* ERROR */
+
+.error {
+  font-size: 2.2rem;
+  color: #fff;
+  background-color: #e03131;
+  padding: 1.6rem;
+  text-align: center;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--primary {
+  font-size: 2.4rem;
+  background-color: #0b7285;
+  color: #fff;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.btn--primary:hover {
+  background-color: #095b6a;
+}
+
+.btn--secondary {
+  padding: 0.5rem 0.8rem;
+  color: #fff;
+}
+
+.task-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.task-action-buttons .btn {
+  padding: 0.2rem 0.6rem;
+}
+
+.btn--edit {
+  background-color: #ffd43b;
+}
+
+.btn--edit:hover {
+  background-color: #ccaa2f;
+}
+
+.btn--delete {
+  background-color: #e03131;
+}
+
+.btn--delete:hover {
+  background-color: #b32727;
+}
+
+.btn--completed {
+  background-color: #2b8a3e;
+}
+
+.btn--completed:hover {
+  background-color: #226e32;
+}
+
+.btn--incomplete {
+  background-color: #212529;
+}
+
+.btn--incomplete:hover {
+  background-color: #162015;
+}
+
+/* ICONS */
+
+.icon {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.btn--action .icon {
+  font-size: 1.6rem;
+}

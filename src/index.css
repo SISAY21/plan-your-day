@@ -1,0 +1,84 @@
+/* HEADER */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.6rem;
+  margin-left: -8%;
+}
+
+.app-logo {
+  width: 10%;
+}
+
+/* ADD TODO */
+
+.add-todo {
+  display: grid;
+  grid-template-columns: 95fr 5fr;
+  column-gap: 1.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.add-todo input {
+  padding: 0.8rem 1.6rem;
+}
+
+/* TODO CONTROLLERS */
+.todo-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+}
+
+.todo-controls select {
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+}
+
+.todo--controls-group {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.search {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.search input {
+  padding: 0.8rem 1.2rem;
+}
+
+/* TASKS SECTION */
+
+.tasks-message {
+  font-size: 1.6rem;
+  color: #aaa;
+  margin-bottom: 2.4rem;
+  font-style: italic;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 75fr 25fr;
+  padding-bottom: 1.2rem;
+  border-bottom: solid 1px #242a2e;
+}
+
+.task-note {
+  font-size: 1.6rem;
+  color: #f6f6f6;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
