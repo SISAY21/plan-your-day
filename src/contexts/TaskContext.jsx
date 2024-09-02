@@ -181,12 +181,15 @@ function TaskProvider({ children }) {
       ? tasks.filter((task) => task.task.toLowerCase().includes(searchQuery))
       : tasks;
 
+  console.log(searchedTasks);
+
   const filteredTasks =
     filter !== "default"
       ? filter === "completed"
         ? searchedTasks.filter((task) => task.isCompleted === true)
         : searchedTasks.filter((task) => task.isCompleted === false)
       : searchedTasks;
+  console.log(filteredTasks);
 
   return (
     <TaskContext.Provider
