@@ -31,6 +31,10 @@ input {
   outline: none;
 }
 
+select {
+  border-radius: 0;
+}
+
 .app-container {
   background-color: #2d3439;
   padding: 3.2rem 6.4rem;
@@ -129,6 +133,9 @@ h1.app-title {
   background-color: #162015;
 }
 
+.task-action-buttons .btn {
+  padding: 0.4rem 0.6rem;
+}
 /* ICONS */
 
 .icon {

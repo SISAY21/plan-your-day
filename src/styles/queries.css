@@ -70,10 +70,11 @@
 
   .app-container {
     padding: 4.8rem;
+    min-height: 45rem;
   }
 
-  .app-container {
-    min-height: 45rem;
+  .task-action-buttons .btn {
+    padding: 0.6rem 0.8rem;
   }
 }
 
@@ -93,10 +94,38 @@
 
   .app-logo {
     display: block;
-    width: 15%;
+    width: 20%;
   }
 
   h1.app-title {
     font-size: 3rem;
+  }
+
+  .add-todo input,
+  .search input,
+  .todo-controls select {
+    padding: 1.4rem 1.6rem;
+  }
+
+  .add-todo input::placeholder,
+  .search input::placeholder {
+    font-size: 2rem;
+  }
+
+  .btn--primary {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+  .btn--secondary {
+    padding: 0.5rem 1.4rem;
+  }
+
+  .tasks-message {
+    font-size: 1.8rem;
+  }
+
+  .task-note {
+    font-size: 2.4rem;
   }
 }

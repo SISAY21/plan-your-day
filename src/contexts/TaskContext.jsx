@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useReducer } from "react";
 import supabase from "../../data/supabase";
+import GetOrCreateUserId from "./GetOrCreateUserId";
 
 const initialState = {
   tasks: [],
@@ -102,6 +103,7 @@ function TaskProvider({ children }) {
     { tasks, searchQuery, filter, error, isLoading, isEditing, taskTobeEdited },
     dispatch,
   ] = useReducer(reducer, initialState);
+  const userId = GetOrCreateUserId();
 
   // FETCH TASKS
   useEffect(
@@ -109,7 +111,10 @@ function TaskProvider({ children }) {
       dispatch({ type: "loading" });
 
       async function fetchTasks() {
-        const { data } = await supabase.from("tasks").select("*");
+        const { data } = await supabase
+          .from("tasks")
+          .select("*")
+          .eq("user_id", userId);
 
         if (!error) dispatch({ type: "tasks/loaded", payload: data });
         if (error) {
@@ -121,7 +126,7 @@ function TaskProvider({ children }) {
       }
       fetchTasks();
     },
-    [error]
+    [error, userId]
   );
 
   // CREATE A TASK
@@ -130,7 +135,7 @@ function TaskProvider({ children }) {
 
     const { data, error } = await supabase
       .from("tasks")
-      .insert([{ task: newTask }])
+      .insert([{ task: newTask, user_id: userId }])
       .select();
 
     if (!error) dispatch({ type: "task/created", payload: data.at(0) });
@@ -205,6 +210,7 @@ function TaskProvider({ children }) {
         createTask,
         deleteTask,
         updateTaskCompletion,
+        userId,
       }}
     >
       {children}

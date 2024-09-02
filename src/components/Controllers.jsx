@@ -2,7 +2,7 @@ import supabase from "../../data/supabase";
 import { useTask } from "../contexts/TaskContext";
 
 function Controllers() {
-  const { tasks, filter, dispatch } = useTask();
+  const { tasks, filter, dispatch, userId } = useTask();
   const isIncompleted =
     tasks?.filter((task) => task.isCompleted !== true).length > 0 &&
     (filter === "incomplete" || filter === "default");
@@ -19,7 +19,7 @@ function Controllers() {
     const { data, error } = await supabase
       .from("tasks")
       .update({ isCompleted })
-      .neq("id", -1)
+      .eq("user_id", userId)
       .select();
 
     if (!error)
