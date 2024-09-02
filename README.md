@@ -9,4 +9,4 @@ This is a React-based task management application that uses Supabase for backend
 
 This app provides a smooth and intuitive interface for managing tasks efficiently.
 
-LIVE DEMO: `https://plan-your-day1.netlify.app/`
+LIVE DEMO: [(https://plan-your-day1.netlify.app/)]
