@@ -178,10 +178,10 @@ function TaskProvider({ children }) {
 
   const searchedTasks =
     searchQuery.length > 0
-      ? tasks.filter((task) => task.task.toLowerCase().includes(searchQuery))
+      ? tasks.filter((task) =>
+          task.task?.toLowerCase().includes(searchQuery.toLowerCase())
+        )
       : tasks;
-
-  console.log(searchedTasks);
 
   const filteredTasks =
     filter !== "default"
@@ -189,7 +189,6 @@ function TaskProvider({ children }) {
         ? searchedTasks.filter((task) => task.isCompleted === true)
         : searchedTasks.filter((task) => task.isCompleted === false)
       : searchedTasks;
-  console.log(filteredTasks);
 
   return (
     <TaskContext.Provider
