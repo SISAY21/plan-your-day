@@ -2,8 +2,6 @@ import { IoSearch } from "react-icons/io5";
 import { useTask } from "../contexts/TaskContext";
 
 function Search() {
-  // const [query, setQuery] = useState("");
-
   const { searchQuery, dispatch } = useTask();
 
   function handleSubmit(e) {

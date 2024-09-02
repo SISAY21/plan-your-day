@@ -78,10 +78,6 @@
 }
 
 @media (max-width: 420px) {
-  html {
-    font-size: 45%;
-  }
-
   body {
     background-image: linear-gradient(#2d3439, #2d3439);
   }
@@ -90,11 +86,16 @@
     width: 100%;
   }
 
+  .app-logo {
+    display: block;
+    width: 15%;
+  }
+
   h1.app-title {
     font-size: 3rem;
   }
 
   .app-container {
-    padding: 0rem 6.4rem;
+    padding: 0rem 3.2rem;
   }
 }

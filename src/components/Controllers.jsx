@@ -4,7 +4,7 @@ import { useTask } from "../contexts/TaskContext";
 function Controllers() {
   const { tasks, filter, dispatch } = useTask();
   const isIncompleted =
-    tasks.filter((task) => task.isCompleted !== true).length > 0 &&
+    tasks?.filter((task) => task.isCompleted !== true).length > 0 &&
     (filter === "incomplete" || filter === "default");
 
   // CONTROL FILTERS
