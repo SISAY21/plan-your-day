@@ -8,3 +8,5 @@ This is a React-based task management application that uses Supabase for backend
 - **Real-Time Updates**: All task operations update both the frontend and the Supabase backend in real time.
 
 This app provides a smooth and intuitive interface for managing tasks efficiently.
+
+LIVE DEMO: `https://plan-your-day1.netlify.app/`
