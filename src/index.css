@@ -16,6 +16,7 @@
 
 .add-todo {
   display: grid;
+  align-items: center;
   grid-template-columns: 95fr 5fr;
   column-gap: 1.4rem;
   margin-bottom: 3.2rem;
@@ -45,6 +46,7 @@
 
 .search {
   display: flex;
+  align-items: center;
   gap: 1.4rem;
 }
 
